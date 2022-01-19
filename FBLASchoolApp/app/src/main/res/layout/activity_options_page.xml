@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".OptionsPage">
+
+    <TextView
+        android:id="@+id/txtViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="Please select one of the  options to continue!"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="162dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/kellercentrallogo"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewTitle"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewTitle" />
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Schedule"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnCalendar"
+        android:layout_width="214sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Calendar"
+        app:layout_constraintEnd_toEndOf="@+id/btnSchedule"
+        app:layout_constraintStart_toStartOf="@+id/btnSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
+
+    <Button
+        android:id="@+id/btnLunchMenu"
+        android:layout_width="214sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Lunch Menu"
+        app:layout_constraintEnd_toEndOf="@+id/btnExtracurriculars"
+        app:layout_constraintStart_toStartOf="@+id/btnExtracurriculars"
+        app:layout_constraintTop_toBottomOf="@+id/btnExtracurriculars" />
+
+    <Button
+        android:id="@+id/btnExtracurriculars"
+        android:layout_width="214sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Extracurriculars"
+        app:layout_constraintEnd_toEndOf="@+id/btnEmail"
+        app:layout_constraintStart_toStartOf="@+id/btnEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmail" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="214sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Email a teacher"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
+        app:layout_constraintStart_toStartOf="@+id/btnCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalendar" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionBtnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_login_24"
+        app:backgroundTint="@color/centralGold"
+        android:background="@drawable/floating_action_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Navigation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

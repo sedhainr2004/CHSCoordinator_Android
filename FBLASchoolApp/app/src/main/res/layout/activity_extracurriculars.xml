@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/centralGold"
+    tools:context=".Extracurriculars">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionBtnOptionsPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_west_24"
+        app:backgroundTint="@color/centralRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnClubs"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Clubs/Organizations"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/btnSports"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Sports"
+        app:layout_constraintEnd_toEndOf="@+id/btnClubs"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/btnClubs"
+        app:layout_constraintTop_toBottomOf="@+id/btnClubs" />
+
+    <TextView
+        android:id="@+id/txtUploadSchedule2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Extracurriculars"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="273dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtUploadSchedule2"
+        app:layout_constraintStart_toStartOf="@+id/txtUploadSchedule2"
+        app:layout_constraintTop_toBottomOf="@+id/txtUploadSchedule2"
+        app:srcCompat="@drawable/ecs" />
+
+    <ImageView
+        android:id="@+id/imgViewTwitter"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSports"
+        app:srcCompat="@drawable/icons8twitter" />
+
+    <ImageView
+        android:id="@+id/imgViewIG"
+        android:layout_width="72dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgViewMaxPreps"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toEndOf="@+id/imgViewTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/btnSports"
+        app:srcCompat="@drawable/floatingactioninstabtn" />
+
+    <ImageView
+        android:id="@+id/imgViewMaxPreps"
+        android:layout_width="71dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSports"
+        app:srcCompat="@drawable/maxprepsfloatingactionbtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

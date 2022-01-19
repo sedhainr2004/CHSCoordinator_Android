@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "647023146569",
+    "project_id": "fbla-mobile-app-cd5a8",
+    "storage_bucket": "fbla-mobile-app-cd5a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647023146569:android:5642b33c694c92df133198",
+        "android_client_info": {
+          "package_name": "com.example.fblaschoolapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647023146569-1mupd169krdash9i3hqhtk9c4opb0raf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_AfjhzfBpqOTMWerVwGXq7EnzpUR8fBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647023146569-1mupd169krdash9i3hqhtk9c4opb0raf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
