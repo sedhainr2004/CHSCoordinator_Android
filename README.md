@@ -21,20 +21,20 @@ The CHS School app is an app that is built specifically for the students here at
 -There is a signed apk folder named "Signed APK", you will install that APK to an android device and you can run the application
 
 **Build Instructions**
--Android Studio 2020.3.1 for Windows or Mac
--Android Platform with a minimum SDK version of 21
+- Android Studio 2020.3.1 for Windows or Mac
+- Android Platform with a minimum SDK version of 21
 
 **Resources Used**
--Icons: https://icons8.com/
--Calendar Data: https://www.kellerisd.net/Page/2#calendar180/20220122/
---Lunch Menu Data: http://menus.sodexomyway.com/BiteMenu/Menu?menuId=14035&locationId=20491001&whereami=https://kellerisd.sodexomyway.com/landing/high
--Extracurriculars and Sports Data: https://www.kellerisd.net/Page/9
+- Icons: https://icons8.com/
+- Calendar Data: https://www.kellerisd.net/Page/2#calendar180/20220122/
+- Lunch Menu Data: http://menus.sodexomyway.com/BiteMenu/Menu?menuId=14035&locationId=20491001&whereami=https://kellerisd.sodexomyway.com/landing/high
+- Extracurriculars and Sports Data: https://www.kellerisd.net/Page/9
 
 **Software/Technologies Used**
--Android Studio 2020: the IDE that was used to create the Android app, used Java as your language
--GitHub: https://github.com/ (used to store source code and share code with each other)
--Figma: https://www.figma.com/ (used to design the app layout)
--Firebase: https://firebase.google.com/ (used to store user information, authenticate users when logging in, and use their bug reporting system)
+- Android Studio 2020: the IDE that was used to create the Android app, used Java as your language
+- GitHub: https://github.com/ (used to store source code and share code with each other)
+- Figma: https://www.figma.com/ (used to design the app layout)
+- Firebase: https://firebase.google.com/ (used to store user information, authenticate users when logging in, and use their bug reporting system)
 
 MIT License
 
