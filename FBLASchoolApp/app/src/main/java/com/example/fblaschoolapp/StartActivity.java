@@ -91,7 +91,7 @@ public class StartActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(StartActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show(); //adding a failure listener so the user can know why they can't log in
 
             }
         });

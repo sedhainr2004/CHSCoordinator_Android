@@ -24,7 +24,7 @@ public class Twitter extends AppCompatActivity {
 
 
         //setting up the webview client and loading the url
-        webView = findViewById(R.id.wbOrganizations);
+        webView = findViewById(R.id.wbTwitter);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://twitter.com/");
         webView.getSettings().setJavaScriptEnabled(true);

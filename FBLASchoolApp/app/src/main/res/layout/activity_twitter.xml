@@ -22,7 +22,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <WebView
-        android:id="@+id/wbOrganizations"
+        android:id="@+id/wbTwitter"
         android:layout_width="397dp"
         android:layout_height="637dp"
         android:layout_marginStart="16dp"

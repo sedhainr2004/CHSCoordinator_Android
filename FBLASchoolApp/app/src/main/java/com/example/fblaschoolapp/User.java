@@ -12,8 +12,7 @@ public class User {
     private String imageURL;
     private String id;
 
-    public User ()
-    {
+    public User() {
 
     }
 
