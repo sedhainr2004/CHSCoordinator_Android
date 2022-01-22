@@ -27,7 +27,7 @@ The CHS School app is an app that is built specifically for the students here at
 **Resources Used**
 -Icons: https://icons8.com/
 -Calendar Data: https://www.kellerisd.net/Page/2#calendar180/20220122/
--Lunch Menu Data: http://menus.sodexomyway.com/BiteMenu/Menu?menuId=14035&locationId=20491001&whereami=https://kellerisd.sodexomyway.com/landing/high
+--Lunch Menu Data: http://menus.sodexomyway.com/BiteMenu/Menu?menuId=14035&locationId=20491001&whereami=https://kellerisd.sodexomyway.com/landing/high
 -Extracurriculars and Sports Data: https://www.kellerisd.net/Page/9
 
 **Software/Technologies Used**
