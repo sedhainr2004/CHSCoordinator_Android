@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.instabug.library.Instabug;
 import com.squareup.picasso.Picasso;
 
 import java.net.URI;
@@ -36,6 +37,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
         email = findViewById(R.id.editTxtEmail);
         password = findViewById(R.id.editTxtPassword);
         auth = FirebaseAuth.getInstance();

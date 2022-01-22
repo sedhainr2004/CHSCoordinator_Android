@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         mRootRef = FirebaseDatabase.getInstance().getReference();
 
-        //initializing the varibles
+        //initializing the variables
         firstName = findViewById(R.id.edTxtFirstName);
         lastName = findViewById(R.id.edTxtLastName);
         password = findViewById(R.id.edTxtPassword);
