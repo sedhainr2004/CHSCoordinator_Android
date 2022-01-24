@@ -29,6 +29,9 @@ The CHS School app is an app that is built specifically for the students here at
 - Calendar Data: https://www.kellerisd.net/Page/2#calendar180/20220122/
 - Lunch Menu Data: http://menus.sodexomyway.com/BiteMenu/Menu?menuId=14035&locationId=20491001&whereami=https://kellerisd.sodexomyway.com/landing/high
 - Extracurriculars and Sports Data: https://www.kellerisd.net/Page/9
+- Twitter: https://twitter.com/
+- Instagram: https://www.instagram.com/
+- Maxpreps: https://www.maxpreps.com/tx/keller/keller-central-chargers/
 
 **Software/Technologies Used**
 - Android Studio 2020: the IDE that was used to create the Android app, used Java as your language
