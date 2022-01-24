@@ -38,6 +38,7 @@ The CHS Coordinator is an app that is built specifically for the students here a
 - Figma: https://www.figma.com/ (used to design the app layout)
 - Firebase: https://firebase.google.com/ (used to store user information, authenticate users when logging in, and use their bug reporting system)
 
+# License
 MIT License
 
 Copyright (c) 2022 CHS
