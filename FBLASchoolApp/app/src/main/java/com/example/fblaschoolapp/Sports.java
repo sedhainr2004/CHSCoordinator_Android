@@ -24,7 +24,7 @@ public class Sports extends AppCompatActivity {
 
         webView = findViewById(R.id.wbSports);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.kellerisd.net/domain/3495");
+        webView.loadUrl("https://www.kellerisd.net/domain/2292");
         webView.getSettings().setJavaScriptEnabled(true);
 
         floatingActionButton = findViewById(R.id.floatingActionBtnSports);
