@@ -2,12 +2,17 @@ package com.example.fblaschoolapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +35,7 @@ public class StartActivity extends AppCompatActivity {
     private EditText password;
     private FirebaseAuth auth;
     private FirebaseUser user;
+    private TextView txtForgotPassword;
 
     public static String userEmail,userPassword; //this is for future use throughout the app in case we need the emails and passwords
 
@@ -45,6 +51,7 @@ public class StartActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser(); //getting the current user
         userEmail = "";
         userPassword = "";
+
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
@@ -67,6 +74,14 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StartActivity.this,RegisterActivity.class));
+            }
+        });
+
+        txtForgotPassword = findViewById(R.id.txtForgotPassword);
+        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StartActivity.this, ForgotPasswordActivity.class));
             }
         });
 

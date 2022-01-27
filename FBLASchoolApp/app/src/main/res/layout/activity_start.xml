@@ -71,6 +71,8 @@
         app:layout_constraintStart_toStartOf="@+id/editTxtEmail"
         app:layout_constraintTop_toBottomOf="@+id/editTxtEmail" />
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="201dp"
@@ -81,6 +83,18 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/forgot_password"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        android:textColor="@color/instabug_url_color_blue"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

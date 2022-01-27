@@ -1,20 +1,15 @@
 package com.example.fblaschoolapp;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,19 +21,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
-import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
-
-import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private Button btnRegister;
     private FloatingActionButton btnBack;
-
 
 
     private EditText firstName;
@@ -51,7 +38,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private DatabaseReference mRootRef;
     private FirebaseAuth auth;
-
 
 
     @Override
@@ -69,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
         studentID = findViewById(R.id.edTxtStudentID);
         email = findViewById(R.id.edtTextEmail);
         btnBack = findViewById(R.id.floatingActionBtnBack);
-
 
 
         btnRegister = findViewById(R.id.registrationButton);
@@ -103,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this,StartActivity.class));
+                startActivity(new Intent(RegisterActivity.this, StartActivity.class));
             }
         });
 
@@ -118,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-               User user = new User(firstName,lastName,email,password,studentId,"default", auth.getCurrentUser().getUid());
+                User user = new User(firstName, lastName, email, password, studentId, "default", auth.getCurrentUser().getUid());
 
                 mRootRef.child("Users").child(auth.getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -127,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
                             System.out.println("user is registered");
                             pd.dismiss();
                             Toast.makeText(RegisterActivity.this, "User is registered!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this , StartActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, StartActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             finish();
@@ -149,7 +134,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     //TODO: add instabug reporting system
     //TODO: forgot password
-
 
 
 }

@@ -102,8 +102,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Button"
         android:background="@drawable/sendbutton"
+        android:text="Send"
         app:layout_constraintEnd_toEndOf="@+id/edtTxtMessage"
         app:layout_constraintStart_toStartOf="@+id/edtTxtMessage"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtMessage" />

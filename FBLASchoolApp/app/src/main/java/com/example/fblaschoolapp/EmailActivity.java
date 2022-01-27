@@ -28,9 +28,6 @@ public class EmailActivity extends AppCompatActivity {
     private EditText txtEmail, txtSubject, txtMessage;
     private Button btnSend;
     private FloatingActionButton btnBack;
-    private FirebaseUser user;
-    private String senderEmail;
-    private String senderPassword;
 
 
 
@@ -39,33 +36,12 @@ public class EmailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email);
 
+        //initializing the variables
         txtEmail = findViewById(R.id.editTextTextEmailAddress);
         txtSubject = findViewById(R.id.edtTxtSubject);
         txtMessage = findViewById(R.id.edtTxtMessage);
         btnSend = findViewById(R.id.btnSendEmail);
-        user = FirebaseAuth.getInstance().getCurrentUser();
-        senderEmail = StartActivity.userEmail;
-        senderPassword = StartActivity.userPassword;
         btnBack = findViewById(R.id.floatingActionBtnHome);
-
-        FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = snapshot.getValue(User.class);
-                senderEmail = user.getEmail();
-                senderPassword = user.getPassword();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        System.out.println(senderEmail + senderPassword);
-
-
-
 
 
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +89,7 @@ public class EmailActivity extends AppCompatActivity {
         i.putExtra(Intent.EXTRA_TEXT, message);
         getIntent().setData(Uri.parse("mailTo:"));
 
+        //to prevent null pointer errors and prevent app crashes if the emulator doesn't have the gmail app installed...
         if(i.resolveActivity(getPackageManager()) != null)
             startActivity(i);
         else
