@@ -25,7 +25,7 @@ public class SchoolCalendar extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.wbCalendar);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.kellerisd.net/Page/2#calendar180/20211211/month");
+        webView.loadUrl("https://www.kellerisd.net/Page/2#calendar180/");
         webView.getSettings().setJavaScriptEnabled(true);
 
         floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionBtnCal);

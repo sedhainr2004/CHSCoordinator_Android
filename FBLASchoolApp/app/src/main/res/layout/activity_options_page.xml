@@ -24,22 +24,34 @@
         android:id="@+id/imageView2"
         android:layout_width="162dp"
         android:layout_height="157dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/kellercentrallogo"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/cshlogo"
         app:layout_constraintEnd_toEndOf="@+id/txtViewTitle"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/txtViewTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtViewTitle" />
+
+    <Button
+        android:id="@+id/btnLunchMenu"
+        android:layout_width="214sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Lunch Menu"
+        app:layout_constraintEnd_toEndOf="@+id/btnExtracurriculars"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnExtracurriculars"
+        app:layout_constraintTop_toBottomOf="@+id/btnExtracurriculars" />
 
     <Button
         android:id="@+id/btnSchedule"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_radius_button"
         android:text="Schedule"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -51,19 +63,9 @@
         android:background="@drawable/rounded_radius_button"
         android:text="Calendar"
         app:layout_constraintEnd_toEndOf="@+id/btnSchedule"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnSchedule"
         app:layout_constraintTop_toBottomOf="@+id/btnSchedule" />
-
-    <Button
-        android:id="@+id/btnLunchMenu"
-        android:layout_width="214sp"
-        android:layout_height="50sp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_radius_button"
-        android:text="Lunch Menu"
-        app:layout_constraintEnd_toEndOf="@+id/btnExtracurriculars"
-        app:layout_constraintStart_toStartOf="@+id/btnExtracurriculars"
-        app:layout_constraintTop_toBottomOf="@+id/btnExtracurriculars" />
 
     <Button
         android:id="@+id/btnExtracurriculars"
@@ -73,6 +75,7 @@
         android:background="@drawable/rounded_radius_button"
         android:text="Extracurriculars"
         app:layout_constraintEnd_toEndOf="@+id/btnEmail"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnEmail"
         app:layout_constraintTop_toBottomOf="@+id/btnEmail" />
 
@@ -84,6 +87,7 @@
         android:background="@drawable/rounded_radius_button"
         android:text="Email a teacher"
         app:layout_constraintEnd_toEndOf="@+id/btnCalendar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnCalendar"
         app:layout_constraintTop_toBottomOf="@+id/btnCalendar" />
 

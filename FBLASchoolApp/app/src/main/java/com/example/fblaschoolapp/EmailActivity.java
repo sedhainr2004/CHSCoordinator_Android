@@ -43,6 +43,8 @@ public class EmailActivity extends AppCompatActivity {
         btnSend = findViewById(R.id.btnSendEmail);
         btnBack = findViewById(R.id.floatingActionBtnHome);
 
+        //TODO: add a warning activity letting the users kn0ow to log into the gmail app before hand
+
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,7 @@ public class EmailActivity extends AppCompatActivity {
                     Toast.makeText(EmailActivity.this, "Please enter all of the information before sending an email", Toast.LENGTH_SHORT).show();
 
                 }
+                //making sure that the user can only send emails to the @kellerisd domain
                 else if(!txtEmail.getText().toString().contains("@kellerisd"))
                 {
                     Toast.makeText(EmailActivity.this,"Please send the email to people INSIDE of KellerISD :)", Toast.LENGTH_SHORT).show();
@@ -79,21 +82,24 @@ public class EmailActivity extends AppCompatActivity {
 
     //this method will help send the email
     public void sendEmail() {
-        String email = txtEmail.getText().toString();
+        String[] email = txtEmail.getText().toString().split(",");
         String subject = txtSubject.getText().toString();
         String message = txtMessage.getText().toString();
 
-        Intent i = new Intent(Intent.ACTION_SENDTO);
-        i.putExtra(Intent.EXTRA_EMAIL,email);
-        i.putExtra(Intent.EXTRA_SUBJECT, subject);
-        i.putExtra(Intent.EXTRA_TEXT, message);
-        getIntent().setData(Uri.parse("mailTo:"));
+        Intent intent = new Intent(Intent.ACTION_SEND);
 
-        //to prevent null pointer errors and prevent app crashes if the emulator doesn't have the gmail app installed...
-        if(i.resolveActivity(getPackageManager()) != null)
-            startActivity(i);
-        else
-            Toast.makeText(EmailActivity.this,"No App is Installed", Toast.LENGTH_SHORT).show();
+        intent.putExtra(Intent.EXTRA_EMAIL,email);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        intent.setType("message/rfc822");
+        try {
+            startActivity(Intent.createChooser(intent, "Choose an Email Service"));
+
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(EmailActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
 
 
