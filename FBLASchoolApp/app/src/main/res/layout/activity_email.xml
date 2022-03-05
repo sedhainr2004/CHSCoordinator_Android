@@ -18,79 +18,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionBtnBugEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/debugApp"
-        android:src="@drawable/icons8smartphonebug80"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="338dp"
+        android:layout_width="330dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
+        android:gravity="center_vertical"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/txtTo"
         app:layout_constraintTop_toBottomOf="@+id/txtTo" />
 
-    <EditText
-        android:id="@+id/edtTxtSubject"
-        android:layout_width="338dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Subject"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/txtSubject"
-        app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
-
     <TextView
         android:id="@+id/txtTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="To:"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="36dp" />
-
-    <TextView
-        android:id="@+id/txtSubject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Subject:"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-    <TextView
-        android:id="@+id/txtMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Message:"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/edtTxtSubject"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtSubject" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtTxtMessage"
-        android:layout_width="338dp"
+        android:layout_width="330dp"
         android:layout_height="178dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Please write your message here and please remember to SIGN IN with your SCHOOL email on this device in order to send an email."
@@ -99,16 +57,51 @@
         app:layout_constraintStart_toStartOf="@+id/txtMessage"
         app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
 
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Message:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtSubject"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtSubject" />
+
+    <EditText
+        android:id="@+id/edtTxtSubject"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Subject"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/txtSubject"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
+
+    <TextView
+        android:id="@+id/txtSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Subject:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
     <Button
         android:id="@+id/btnSendEmail"
         android:layout_width="338dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/sendbutton"
         android:text="Send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtMessage"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtMessage"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtMessage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ public class Instagram extends AppCompatActivity {
 
 
         //setting up the webview
-        webView = findViewById(R.id.wbOrganizations);
+        webView = findViewById(R.id.wbIG);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://www.instagram.com/");
         webView.getSettings().setJavaScriptEnabled(true);

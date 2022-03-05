@@ -25,11 +25,11 @@
         android:id="@+id/btnChooseFile"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/registration_button"
         android:text="Choose File"
         app:layout_constraintEnd_toStartOf="@+id/btnUpload"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="@+id/imgViewSchedule"
         app:layout_constraintTop_toBottomOf="@+id/imgViewSchedule" />
 
@@ -37,7 +37,7 @@
         android:id="@+id/btnUpload"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/registration_button"
         android:text="Upload"
@@ -46,13 +46,12 @@
 
     <ImageView
         android:id="@+id/imgViewSchedule"
-        android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="353dp"
+        android:layout_height="298dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/image_border"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUploadSchedule"
         app:srcCompat="@drawable/instruction" />
