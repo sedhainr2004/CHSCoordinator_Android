@@ -1,0 +1,88 @@
+{
+  "Entrees": [
+    {
+      "Title": "Cinnamon Toast Crunch Cereal Bar",
+      "Calories": "158 cal"
+    },
+    {
+      "Title": "Hash Brown",
+      "Calories": "130 cal"
+    }
+  ],
+  "Protein": [
+    {
+      "Title": "Egg",
+      "Calories": "71 cal"
+    },
+    {
+      "Title": "Reduced Fat Mozzarella Cheese Stick",
+      "Calories": "60 cal"
+    }
+  ],
+  "Grains": [
+    {
+      "Title": "Banana Chocolate Chunk BeneFIT Bar",
+      "Calories": "280 cal "
+    },
+    {
+      "Title": "Dutch Waffle",
+      "Calories": "305 cal"
+    },
+    {
+      "Title": "Cinnamon UBR",
+      "Calories": "270 cal"
+    },
+    {
+      "Title": "Nutrigrain Bar, Blueberry",
+      "Calories": "160 cal"
+    },
+    {
+      "Title": "Cinnamon Toast Crunch Cereal",
+      "Calories": "110 cal"
+    },
+    {
+      "Title": "Lucky Charms Bowlpack",
+      "Calories": "111 cal"
+    }
+  ],
+  "Fruits": [
+    {
+      "Title": "Banana",
+      "Calories": "105 cal"
+    },
+    {
+      "Title": "Crispy Whole Apple",
+      "Calories": "48 cal"
+    },
+    {
+      "Title": "Orange Smiles",
+      "Calories": "45 cal"
+    },
+    {
+      "Title": "Diced Bartlett Pears",
+      "Calories": "59 cal"
+    }
+  ],
+  "Drinks": [
+    {
+      "Title": "Apple Juice",
+      "Calories": "60 cal"
+    },
+    {
+      "Title": "Orange Juice",
+      "Calories": "50 cal"
+    },
+    {
+      "Title": "Strawberry Milk",
+      "Calories": "120 cal"
+    },
+    {
+      "Title": "Lowfat 1% Milk",
+      "Calories": "102 cal"
+    },
+    {
+      "Title": "Chocolate Skim Milk",
+      "Calories": "152 cal"
+    }
+  ]
+}
