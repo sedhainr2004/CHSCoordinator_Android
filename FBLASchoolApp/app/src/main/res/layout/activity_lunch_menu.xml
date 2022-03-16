@@ -5,22 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LunchMenu"
-    android:background="@color/centralRed">
-
-    <WebView
-        android:id="@+id/wbLunch"
-        android:layout_width="353dp"
-        android:layout_height="671dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
+    android:background="@android:color/darker_gray">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionBtnSchedule"
@@ -35,5 +20,55 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="335dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Lunch Menu"
+        android:textStyle=""
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgViewLunch"
+        android:layout_width="164dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:srcCompat="@drawable/lunchmenuicaon" />
+
+    <Button
+        android:id="@+id/btnBfastItems"
+        android:layout_width="223dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/rounded_radius_button"
+        android:text="Breakfast Items"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewLunch"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/imgViewLunch"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLunch" />
+
+    <Button
+        android:id="@+id/btnLunchItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lunch Items"
+        app:layout_constraintEnd_toEndOf="@+id/btnBfastItems"
+        app:layout_constraintStart_toStartOf="@+id/btnBfastItems"
+        app:layout_constraintTop_toBottomOf="@+id/btnBfastItems"
+        android:background="@drawable/rounded_radius_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,10 +54,10 @@
         android:ems="10"
         android:hint="School Email"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewList"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/imgViewList"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewList" />
 
     <EditText
         android:id="@+id/editTxtPassword"
@@ -75,7 +75,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgViewList"
         android:layout_width="201dp"
         android:layout_height="178dp"
         android:layout_marginTop="16dp"
