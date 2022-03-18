@@ -1,6 +1,8 @@
 package com.example.fblaschoolapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,21 +13,28 @@ import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Organizations extends AppCompatActivity {
-    private WebView webView;
-    private FloatingActionButton floatingActionButton;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    @SuppressLint("SetJavaScriptEnabled")
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Organizations extends AppCompatActivity {
+    private FloatingActionButton floatingActionButton;
+    private RecyclerView recyclerView;
+    private List<Extracurricular> ecs;
+    private ECsAdapter eCsAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organizations);
+        ecs = new ArrayList<>();
 
-        //setting up webview
-        webView = findViewById(R.id.wbOrganizations);
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.kellerisd.net/domain/3495");
-        webView.getSettings().setJavaScriptEnabled(true);
 
         floatingActionButton = findViewById(R.id.floatingActionBtnClubs);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -34,15 +43,42 @@ public class Organizations extends AppCompatActivity {
                 startActivity(new Intent(Organizations.this, Extracurriculars.class));
             }
         });
+
+        extractData();
+        recyclerView = findViewById(R.id.recyclerViewECs);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        eCsAdapter = new ECsAdapter(this,ecs);
+        recyclerView.setAdapter(eCsAdapter);
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        //this is for ease of navigation in the webview
-        if(webView.canGoBack())
-            webView.goBack();
-        else
-            super.onBackPressed();
+    private void extractData() {
+        String json;
+
+        try{
+            InputStream is = getAssets().open("ECs.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            json = new String(buffer, StandardCharsets.UTF_8);
+            JSONArray jsonArray = new JSONArray(json);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject object = jsonArray.getJSONObject(i);
+                Extracurricular ec = new Extracurricular();
+                ec.setTitle(object.getString("Name of Organization"));
+                ec.setSponsor(object.getString("Sponsor"));
+                ec.setEmail(object.getString("Sponsor Email"));
+                ec.setImageURL(object.getString("ImageURL"));
+                ec.setTwitterURL(object.getString("Twitter"));
+                ec.setIgURl(object.getString("Instagram"));
+                ecs.add(ec);
+
+            }
+        }
+        catch(IOException | JSONException e)
+        {
+            e.printStackTrace();
+        }
     }
 }

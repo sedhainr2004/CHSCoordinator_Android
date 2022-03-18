@@ -62,7 +62,7 @@ public class BreakfastItems extends AppCompatActivity {
             inputStream.read(buffer);
             inputStream.close();
 
-            json = new String(buffer, "UTF-8");
+            json = new String(buffer, StandardCharsets.UTF_8);
             JSONArray jsonArray = new JSONArray(json);
 
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -77,10 +77,8 @@ public class BreakfastItems extends AppCompatActivity {
 
 
 
-        } catch (IOException e) {
+        } catch (IOException | JSONException e) {
             e.printStackTrace();
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
         }
 
 
