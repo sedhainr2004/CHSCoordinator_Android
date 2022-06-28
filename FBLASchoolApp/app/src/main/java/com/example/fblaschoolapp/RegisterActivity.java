@@ -24,18 +24,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    ProgressDialog pd;
     private Button btnRegister;
     private FloatingActionButton btnBack;
-
-
     private EditText firstName;
     private EditText lastName;
     private EditText password;
     private EditText studentID;
     private EditText email;
-
-    ProgressDialog pd;
-
     private DatabaseReference mRootRef;
     private FirebaseAuth auth;
 
@@ -132,8 +128,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    //TODO: add instabug reporting system
-    //TODO: forgot password
 
 
 }

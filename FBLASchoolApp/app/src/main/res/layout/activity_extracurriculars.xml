@@ -22,7 +22,7 @@
         android:id="@+id/btnClubs"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/rounded_radius_button"
         android:text="Clubs/Organizations"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
@@ -34,10 +34,11 @@
         android:id="@+id/btnSports"
         android:layout_width="214dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_radius_button"
         android:text="Sports"
         app:layout_constraintEnd_toEndOf="@+id/btnClubs"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnClubs"
         app:layout_constraintTop_toBottomOf="@+id/btnClubs" />
 
@@ -63,34 +64,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUploadSchedule2"
         app:srcCompat="@drawable/ecs" />
-
-    <ImageView
-        android:id="@+id/imgViewIG"
-        android:layout_width="72dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgViewMaxPreps"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toEndOf="@+id/imgViewTwitter"
-        app:layout_constraintTop_toBottomOf="@+id/btnSports"
-        app:srcCompat="@drawable/floatingactioninstabtn" />
-
-    <ImageView
-        android:id="@+id/imgViewMaxPreps"
-        android:layout_width="71dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgViewIG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/maxprepsfloatingactionbtn" />
-
-    <ImageView
-        android:id="@+id/imgViewTwitter"
-        android:layout_width="75dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgViewIG"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icons8twitter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
